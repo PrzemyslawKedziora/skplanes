@@ -2,7 +2,11 @@
   <div class="row">
     <div class="col-sm-8">
       <mat-form-field>
-        <input matInput formControlName="code" placeholder="Code">
+        <input matInput formControlName="code" placeholder="Code" #codeInput>
+        <mat-error *ngIf="form.get('code')?.errors?.required">Code is required</mat-error>
+        <mat-error *ngIf="form.get('code')?.errors?.minlength">Minimum length is 4 chars</mat-error>
+        <mat-error *ngIf="form.get('code')?.errors?.maxlength">Maximum length is 7 chars</mat-error>
+        <mat-hint align="start">{{ codeInput.value.length}} / 7</mat-hint>
       </mat-form-field>
     </div>
   </div>
@@ -55,7 +59,7 @@
         <div class="col-sm-4">
           <mat-form-field>
             <mat-select formControlName="job" placeholder="Job">
-              <mat-option *ngFor="let job of jobs"[value]="job.value">{{job.label}}</mat-option>
+              <mat-option *ngFor="let job of jobs" [value]="job.value">{{job.label}}</mat-option>
             </mat-select>
           </mat-form-field>
         </div>

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormArray, FormBuilder} from "@angular/forms";
+import {FormArray, FormBuilder, Validators} from "@angular/forms";
 import {FormGroup} from "@angular/forms";
 import {Crew} from "../../models/flight.model";
+
 
 @Component({
   selector: 'app-flight-form',
@@ -18,6 +19,7 @@ export class FlightFormComponent implements OnInit {
     { label: 'Co-Pilot', value: 'copilot'},
 
   ]
+
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -44,11 +46,11 @@ export class FlightFormComponent implements OnInit {
 
   private buildForm() {
     this.form = this.formBuilder.group({
-      origin: '',
-      destination: '',
-      departureTime: '',
-      returnTime: '',
-      code: '',
+      origin: ['', {validators: [Validators.required] }],
+      destination: ['', {validators: [Validators.required] }],
+      departureTime: ['', {validators: [Validators.required] }],
+      returnTime: ['', {validators: [Validators.required] }],
+      code: ['SK', {validators: [Validators.required, Validators.minLength(4), Validators.maxLength(7)] }],
       additionalInformation: '',
       withSKPlanesDiscount: false ,
       crew: this.formBuilder.array([this.buildCrewMember()]),
