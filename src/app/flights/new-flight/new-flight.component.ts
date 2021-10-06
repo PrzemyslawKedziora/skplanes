@@ -9,7 +9,7 @@ import {FlightsService} from "../../core/services/flights.service";
   styleUrls: ['./new-flight.component.css']
 })
 export class NewFlightComponent {
-  @ViewChild('FlightForm') flightForm?: FlightFormComponent ;
+  @ViewChild('flightForm') flightForm?: FlightFormComponent ;
 
   constructor(
     private flightsService: FlightsService,
