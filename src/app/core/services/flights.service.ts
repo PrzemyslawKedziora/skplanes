@@ -25,6 +25,10 @@ export class FlightsService {
       .pipe(map(flight => this.assignKey(flight)))
   }
 
+  editFlight(key: string,flight: Flight) {
+    return this.db.object<Flight>(`${this.API_URL}/${key}`).update(flight);
+  }
+
 
   private assignKey(flight:any) {
     return{...flight.payload.val(),  key:flight.key}
