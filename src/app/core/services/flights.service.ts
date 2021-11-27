@@ -28,6 +28,9 @@ export class FlightsService {
   editFlight(key: string,flight: Flight) {
     return this.db.object<Flight>(`${this.API_URL}/${key}`).update(flight);
   }
+  removeFlight(key: string) {
+    return this.db.object(`${this.API_URL}/${key}`).remove();
+  }
 
 
   private assignKey(flight:any) {

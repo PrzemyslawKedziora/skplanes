@@ -10,4 +10,6 @@
   margin-bottom: 20px;
   font-weight: bold;
 }
-
+.mat-icon {
+  cursor: pointer;
+}

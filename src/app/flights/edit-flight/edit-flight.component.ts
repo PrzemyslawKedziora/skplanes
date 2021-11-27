@@ -27,10 +27,15 @@ export class EditFlightComponent {
     this.loadFlight();
   }
 
+  removeFlight() {
+    this.flightsService.removeFlight(this.flight!.key)
+      .then(this.onRemoveSuccess.bind(this), this.onFailure.bind(this))
+  }
+
   editFlight() {
     // @ts-ignore
     this.flightsService.editFlight(this.flight?.key, this.flightForm?.form.value)
-      .then(this.onEditSuccess.bind(this), this.onEditFailure.bind(this));
+      .then(this.onEditSuccess.bind(this), this.onFailure.bind(this));
 
   }
 
@@ -39,10 +44,15 @@ export class EditFlightComponent {
     this.toast.open('Flight has been succesfully edited', '', {panelClass: 'toast-success'})
   }
 
-  private onEditFailure(error:any) {
+  private onFailure(error:any) {
     this.toast.open(error.message, '', {panelClass: 'toast-error'})
   }
 
+  private onRemoveSuccess() {
+    this.router.navigate(['/dashboard'])
+    this.toast.open('Flight has been succesfully removed', '', {panelClass: 'toast-success'})
+
+  }
 
   private loadFlight() {
     const key = this.route.snapshot.params['key'];
