@@ -2,7 +2,8 @@ import { Component} from '@angular/core';
 import {AuthService} from "../services/auth.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {Router} from "@angular/router";
-import {error} from "@angular/compiler/src/util";
+
+
 
 @Component({
   selector: 'app-login',
@@ -18,12 +19,13 @@ export class LoginComponent {
   constructor(
     private router: Router,
     private toast: MatSnackBar,
-    private authService: AuthService) { }
-
+    private authService: AuthService,
+) {}
   login() {
     this.authService.login(this.credentials)
       .then( user => this.router.navigate(['/dashboard']))
       .catch( error => this.toast.open(error.message));
   }
+
 }
 

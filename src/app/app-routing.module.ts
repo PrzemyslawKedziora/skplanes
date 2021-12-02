@@ -5,9 +5,10 @@ import { LoginComponent } from './core/login/login.component';
 import {FlightsComponent} from "./flights/flights.component";
 import {EditFlightComponent} from "./flights/edit-flight/edit-flight.component";
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full'},
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent},
 
   {
     path: 'dashboard',
