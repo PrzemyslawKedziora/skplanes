@@ -3,15 +3,15 @@
     <img src="./assets/images/logo_sk.png" class="logo">
     <h3>Login</h3>
     <mat-form-field class="d-block">
-      <input matInput placeholder="Email" required>
+      <input matInput placeholder="Email" [(ngModel)]="credentials.email" required>
       <mat-error>Email is required</mat-error>
     </mat-form-field>
     <mat-form-field class="d-block">
-      <input matInput placeholder="Password" required>
+      <input type="password" matInput placeholder="Password" [(ngModel)]="credentials.password"  required>
       <mat-error>Password is required</mat-error>
     </mat-form-field>
     <div class="btdelete">
-      <button mat-raised-button color="primary">LOG IN</button>
+      <button mat-raised-button color="primary" (click)="login()">LOG IN</button>
     </div>
     <p>Don't have an account?</p>
     <button routerLink="/registration" mat-raised-button color="accent">REGISTER</button>

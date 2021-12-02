@@ -6,6 +6,7 @@ import {RouterModule} from "@angular/router";
 import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MaterialModule} from "../material/material.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import {MaterialModule} from "../material/material.module";
     MatIconModule,
     MatToolbarModule,
     MaterialModule,
+    FormsModule
   ],
   declarations: [DashboardComponent, LoginComponent],
   exports: [DashboardComponent, LoginComponent],
