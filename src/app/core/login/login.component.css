@@ -18,3 +18,11 @@ p  {
 .btdelete {
   padding-top: 10px;
 }
+.login-button {
+  width: 20%;
+  height: 30%;
+  letter-spacing: 2px;
+}
+regbtn {
+  position: relative;
+}
