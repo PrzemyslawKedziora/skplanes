@@ -25,6 +25,7 @@ export class LoginComponent {
     this.authService.login(this.credentials)
       .then( user => this.router.navigate(['/dashboard']))
       .catch( error => this.toast.open(error.message));
+
   }
 
 }
