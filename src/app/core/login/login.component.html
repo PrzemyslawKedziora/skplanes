@@ -8,13 +8,11 @@
       <mat-error>Email is required</mat-error>
     </mat-form-field>
     <mat-form-field class="d-block" style="margin-left: 20%;margin-right: 20%">
-      <input type="password" matInput placeholder="Password"  [(ngModel)]="credentials.password"  required>
-      <mat-error>Password is required</mat-error>
+      <input type="password" matInput placeholder="Password"  [(ngModel)]="credentials.password"  required (keydown.enter)="login()">
+      <mat-error>Password is required</mat-error><br/>
     </mat-form-field>
-    <div class="btdelete">
       <button class="login-button" mat-raised-button color="primary" (click)="login()"> LOG IN</button>
-    </div>
-    <br/>
-    <div class="unimpText">Register</div>
+    <br/><br/>
+    <div class="unimpText">Don't have an account? Do it now!</div>
   </div>
 </div>

@@ -16,7 +16,6 @@
           "spec": false
         },
         "@schematics/angular:guard": {
-          "spec": false
         },
         "@schematics/angular:module": {
           "spec": true

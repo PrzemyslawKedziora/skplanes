@@ -15,16 +15,11 @@ p  {
 .logo {
   margin: 0 auto;
 }
-.btdelete {
-  padding-top: 10px;
-}
+
 .login-button {
-  width: 20%;
-  height: 30%;
   letter-spacing: 2px;
-}
-regbtn {
-  position: relative;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 .unimpText {
   position: relative;
