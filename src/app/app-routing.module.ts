@@ -11,10 +11,8 @@ import {RegisterComponent} from "./core/register/register.component";
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent},
-  { path: 'register',component: RegisterComponent,
-    children: [
-    { path: 'register', redirectTo: '/register', pathMatch: 'full'},
-  ]},
+  { path: 'register',component: RegisterComponent},
+
 
   {
     path: 'dashboard',
