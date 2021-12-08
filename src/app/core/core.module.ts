@@ -5,13 +5,15 @@ import { LoginComponent } from './login/login.component';
 import {RouterModule} from "@angular/router";
 import {MaterialModule} from "../material/material.module";
 import {FormsModule} from "@angular/forms";
+import { RegisterComponent } from './register/register.component';
 
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
