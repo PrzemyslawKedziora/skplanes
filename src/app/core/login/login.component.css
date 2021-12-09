@@ -28,4 +28,12 @@ p  {
 }
 .unimpText:hover {
   text-decoration: underline;
+  color:black;
+}
+a:visited {
+  text-decoration: underline;
+  color:black;
+}
+a {
+  text-decoration: none;
 }
