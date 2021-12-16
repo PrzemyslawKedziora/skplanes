@@ -2,7 +2,6 @@ import { Component} from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthService} from "../services/auth.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
-import {ifStmt} from "@angular/compiler/src/output/output_ast";
 
 @Component({
   selector: 'app-register',
@@ -12,11 +11,14 @@ import {ifStmt} from "@angular/compiler/src/output/output_ast";
 
 
 export class RegisterComponent{
+  [x: string]: any;
   credentials={
     email: '',
     password: '',
     password1: ''
   }
+
+
 
   constructor(
   private router: Router,

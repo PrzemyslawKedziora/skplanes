@@ -1,3 +1,6 @@
+body {
+  background-color: black;
+}
 .login-container {
   margin-top: 100px;
 }
